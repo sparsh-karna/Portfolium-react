@@ -1,0 +1,473 @@
+/* Google Theme */
+.google-portfolio {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  color: #202124;
+  background-color: #f8f9fa;
+  line-height: 1.5;
+}
+
+/* Google Colors */
+.google-blue { color: #4285F4; }
+.google-red { color: #EA4335; }
+.google-yellow { color: #FBBC05; }
+.google-green { color: #34A853; }
+
+/* Google Header and Search */
+.google-header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+  padding: 8px 16px;
+  z-index: 100;
+}
+
+.google-search-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.google-logo {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 500;
+  margin-right: 24px;
+  letter-spacing: -0.5px;
+}
+
+.google-search-bar {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f1f3f4;
+  border-radius: 24px;
+  padding: 8px 16px;
+  margin: 8px 0;
+  width: 50%;
+  max-width: 600px;
+  color: #5f6368;
+}
+
+.google-search-bar i {
+  margin-right: 12px;
+  color: #5f6368;
+}
+
+.google-nav {
+  margin-top: 12px;
+  border-bottom: 1px solid #dadce0;
+}
+
+.google-nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.google-nav li {
+  margin-right: 24px;
+  padding: 12px 0;
+  font-size: 14px;
+  color: #5f6368;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.google-nav li.active {
+  color: #1a73e8;
+  border-bottom: 3px solid #1a73e8;
+}
+
+.google-nav li:hover {
+  color: #202124;
+}
+
+.google-nav li i {
+  margin-right: 8px;
+}
+
+/* Google Main Content */
+.google-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.google-section {
+  margin-bottom: 24px;
+}
+
+.google-section-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Google Profile Section */
+.google-profile-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.google-profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.3);
+}
+
+.google-profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.google-profile-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.google-profile-info h1 {
+  margin: 0 0 8px 0;
+  font-size: 32px;
+  color: #202124;
+}
+
+.google-profile-info h2 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #5f6368;
+}
+
+.google-profile-info p {
+  color: #5f6368;
+  font-size: 14px;
+}
+
+.google-profile-info p i {
+  margin-right: 8px;
+}
+
+/* Google Cards */
+.google-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.google-card-header {
+  padding: 16px;
+  border-bottom: 1px solid #dadce0;
+}
+
+.google-card-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #202124;
+}
+
+.google-card-header h3 i {
+  margin-right: 12px;
+}
+
+.google-card-content {
+  padding: 16px;
+}
+
+.google-no-content {
+  color: #5f6368;
+  font-style: italic;
+}
+
+/* Google Contact Grid */
+.google-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.google-contact-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.google-contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 16px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.google-contact-item h4 {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #202124;
+}
+
+.google-contact-item a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.google-contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Google Skills Section */
+.google-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.google-skill-item {
+  margin-bottom: 16px;
+}
+
+.google-skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.google-skill-info h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #202124;
+}
+
+.google-skill-info span {
+  font-size: 14px;
+  color: #5f6368;
+}
+
+.google-skill-bar {
+  height: 4px;
+  background-color: #e8eaed;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.google-skill-progress {
+  height: 100%;
+  background-color: #1a73e8;
+  border-radius: 2px;
+  transition: width 1s ease-out;
+}
+
+/* Google Timeline */
+.google-timeline {
+  position: relative;
+  padding-left: 24px;
+}
+
+.google-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 8px;
+  height: 100%;
+  width: 2px;
+  background-color: #dadce0;
+}
+
+.google-timeline-item {
+  position: relative;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.google-timeline-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.google-timeline-marker {
+  position: absolute;
+  top: 6px;
+  left: -24px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #1a73e8;
+  z-index: 1;
+}
+
+.google-timeline-content h4 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #202124;
+}
+
+.google-timeline-content h5 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5f6368;
+}
+
+.google-timeline-period {
+  font-size: 14px;
+  color: #5f6368;
+  margin-bottom: 8px;
+}
+
+.google-timeline-description {
+  font-size: 14px;
+  color: #202124;
+}
+
+/* Google Projects */
+.google-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.google-project-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.google-project-card:hover {
+  box-shadow: 0 1px 6px rgba(60, 64, 67, 0.4);
+}
+
+.google-project-image {
+  height: 180px;
+  overflow: hidden;
+}
+
+.google-project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.google-project-card:hover .google-project-image img {
+  transform: scale(1.05);
+}
+
+.google-project-content {
+  padding: 16px;
+}
+
+.google-project-content h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #202124;
+}
+
+.google-project-content p {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  color: #5f6368;
+}
+
+.google-project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.google-tech-chip {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #e8eaed;
+  border-radius: 16px;
+  font-size: 12px;
+  color: #5f6368;
+}
+
+.google-button {
+  display: inline-block;
+  background-color: #1a73e8;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.google-button:hover {
+  background-color: #1765cc;
+}
+
+/* Google Footer */
+.google-footer {
+  background-color: white;
+  border-top: 1px solid #dadce0;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.google-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.google-footer-info {
+  font-size: 12px;
+  color: #5f6368;
+}
+
+.google-footer-info p {
+  margin: 0 0 8px 0;
+}
+
+/* Animation */
+.google-animate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.google-animate-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .google-search-bar {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .google-profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .google-contact-grid,
+  .google-skills-grid,
+  .google-projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

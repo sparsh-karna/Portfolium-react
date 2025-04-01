@@ -1,0 +1,84 @@
+.theme-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Netflix theme base styles */
+.netflix-theme {
+  --theme-primary: #e50914;
+  --theme-secondary: #000000;
+  --theme-background: #141414;
+  --theme-text: #ffffff;
+  --theme-card-bg: #181818;
+  --theme-accent: #e50914;
+}
+
+/* Google theme base styles */
+.google-theme {
+  --theme-primary: #4285F4;
+  --theme-secondary: #34A853;
+  --theme-background: #ffffff;
+  --theme-text: #202124;
+  --theme-card-bg: #f8f9fa;
+  --theme-accent: #FBBC05;
+}
+
+/* Apple theme base styles */
+.apple-theme {
+  --theme-primary: #000000;
+  --theme-secondary: #a1a1a6;
+  --theme-background: #ffffff;
+  --theme-text: #1d1d1f;
+  --theme-card-bg: #f5f5f7;
+  --theme-accent: #0071e3;
+}
+
+/* Microsoft theme base styles */
+.microsoft-theme {
+  --theme-primary: #7FBA00;
+  --theme-secondary: #00A4EF;
+  --theme-background: #f3f2f1;
+  --theme-text: #252423;
+  --theme-card-bg: #ffffff;
+  --theme-accent: #ffb900;
+}
+
+/* Amazon theme base styles */
+.amazon-theme {
+  --theme-primary: #ff9900;
+  --theme-secondary: #146eb4;
+  --theme-background: #ffffff;
+  --theme-text: #232f3e;
+  --theme-card-bg: #f9f9f9;
+  --theme-accent: #ff9900;
+}
+
+/* Meta theme base styles */
+.meta-theme {
+  --theme-primary: #0668E1;
+  --theme-secondary: #000000;
+  --theme-background: #ffffff;
+  --theme-text: #1c1e21;
+  --theme-card-bg: #f0f2f5;
+  --theme-accent: #0668E1;
+}
+
+/* Twitter theme base styles */
+.twitter-theme {
+  --theme-primary: #1da1f2;
+  --theme-secondary: #14171a;
+  --theme-background: #ffffff;
+  --theme-text: #14171a;
+  --theme-card-bg: #f5f8fa;
+  --theme-accent: #1da1f2;
+}
+
+/* Spotify theme base styles */
+.spotify-theme {
+  --theme-primary: #1db954;
+  --theme-secondary: #191414;
+  --theme-background: #191414;
+  --theme-text: #ffffff;
+  --theme-card-bg: #121212;
+  --theme-accent: #1db954;
+}

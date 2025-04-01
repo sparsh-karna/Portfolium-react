@@ -1,0 +1,60 @@
+/* Theme variables for different site inspirations */
+
+/* Netflix Theme */
+.theme-netflix {
+  --primary-color: #e50914;
+  --secondary-color: #221f1f;
+  --text-color: #ffffff;
+  --background-color: #000000;
+  --card-background: #181818;
+  --accent-color: #e50914;
+  --netflix-red: #e50914;
+  --netflix-dark-gray: #221f1f;
+}
+
+/* GitHub Theme */
+.theme-github {
+  --primary-color: #2ea44f;
+  --secondary-color: #24292e;
+  --text-color: #24292e;
+  --background-color: #f6f8fa;
+  --card-background: #ffffff;
+  --accent-color: #0366d6;
+  --progress-bg: #e1e4e8;
+  --progress-fill: #2ea44f;
+}
+
+/* Spotify Theme */
+.theme-spotify {
+  --primary-color: #1db954;
+  --secondary-color: #191414;
+  --text-color: #ffffff;
+  --background-color: #121212;
+  --card-background: #181818;
+  --accent-color: #1db954;
+  --progress-bg: #535353;
+  --progress-fill: #1db954;
+}
+
+/* Twitter Theme */
+.theme-twitter {
+  --primary-color: #1da1f2;
+  --secondary-color: #14171a;
+  --text-color: #ffffff;
+  --background-color: #15202b;
+  --card-background: #192734;
+  --accent-color: #1da1f2;
+  --progress-bg: #38444d;
+  --progress-fill: #1da1f2;
+}
+
+/* Default theme (can be modified) */
+:root {
+  /* Import Netflix theme by default */
+  --primary-color: var(--netflix-red);
+  --secondary-color: var(--netflix-dark-gray);
+  --text-color: #ffffff;
+  --background-color: #000000;
+  --card-background: #181818;
+  --accent-color: #e50914;
+}

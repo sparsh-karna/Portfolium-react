@@ -1,0 +1,374 @@
+:root {
+    --amazon-primary: #FF9900;
+    --amazon-primary-hover: #E68A00;
+    --amazon-text: #111111;
+    --amazon-text-secondary: #555555;
+    --amazon-background: #FFFFFF;
+    --amazon-section-bg: #FAFAFA;
+  }
+  
+  .amazon-portfolio {
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    color: var(--amazon-text);
+    background-color: var(--amazon-background);
+  }
+  
+  /* Amazon Navigation */
+  .amazon-nav {
+    position: sticky;
+    top: 0;
+    background-color: #232F3E;
+    color: white;
+    padding: 10px 24px;
+    z-index: 100;
+  }
+  
+  .amazon-nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .amazon-logo {
+    color: var(--amazon-primary);
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .amazon-nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .amazon-nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  /* Amazon Container */
+  .amazon-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  /* Amazon Hero */
+  .amazon-hero {
+    padding: 60px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .amazon-hero-content {
+    flex: 1;
+    min-width: 300px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .amazon-hero-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .amazon-hero-image {
+    flex: 1;
+    min-width: 300px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    transition-delay: 0.3s;
+  }
+  
+  .amazon-hero-image.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .amazon-hero-image img {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+  
+  .amazon-hero-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .amazon-hero-subtitle {
+    font-size: 18px;
+    color: var(--amazon-primary);
+    margin-bottom: 20px;
+  }
+  
+  .amazon-hero-description {
+    font-size: 16px;
+    color: var(--amazon-text-secondary);
+  }
+  
+  /* Amazon Buttons */
+  .amazon-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .amazon-button-primary {
+    padding: 10px 20px;
+    background-color: var(--amazon-primary);
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .amazon-button-primary:hover {
+    background-color: var(--amazon-primary-hover);
+  }
+  
+  .amazon-button-secondary {
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    color: var(--amazon-primary);
+    border: 1px solid var(--amazon-primary);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .amazon-button-secondary:hover {
+    background-color: #F7F7F7;
+  }
+  
+  /* Amazon Sections */
+  .amazon-section {
+    padding: 60px 0;
+  }
+  
+  .amazon-section-gray {
+    background-color: var(--amazon-section-bg);
+  }
+  
+  .amazon-section-title {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .amazon-section-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Amazon Skills */
+  .amazon-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .amazon-skill-item {
+    width: 280px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .amazon-skill-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .amazon-skill-icon {
+    font-size: 28px;
+    color: var(--amazon-primary);
+    margin-bottom: 10px;
+  }
+  
+  .amazon-skill-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  /* Amazon Timeline */
+  .amazon-timeline {
+    max-width: 800px;
+    margin: 0 auto 40px;
+  }
+  
+  .amazon-timeline-item {
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .amazon-timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .amazon-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--amazon-primary);
+    border-radius: 50%;
+  }
+  
+  .amazon-timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 15px;
+    width: 2px;
+    height: 100%;
+    background-color: #DDD;
+  }
+  
+  .amazon-timeline-date {
+    font-size: 14px;
+    color: var(--amazon-text-secondary);
+  }
+  
+  .amazon-timeline-title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .amazon-timeline-subtitle {
+    font-size: 16px;
+    color: var(--amazon-primary);
+  }
+  
+  /* Amazon Grid and Cards */
+  .amazon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .amazon-card {
+    background-color: white;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .amazon-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .amazon-card-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .amazon-card-content {
+    padding: 20px;
+  }
+  
+  .amazon-card-title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .amazon-card-description {
+    font-size: 14px;
+    color: var(--amazon-text-secondary);
+  }
+  
+  .amazon-card-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .amazon-tech-tag {
+    padding: 4px 10px;
+    background-color: #F7F7F7;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  /* Amazon Contact */
+  .amazon-contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .amazon-contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .amazon-contact-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--amazon-primary);
+    color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+  }
+  
+  .amazon-contact-content a {
+    color: var(--amazon-primary);
+    text-decoration: none;
+  }
+  
+  .amazon-social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .amazon-social-link {
+    width: 40px;
+    height: 40px;
+    background-color: var(--amazon-primary);
+    color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Amazon Footer */
+  .amazon-footer {
+    background-color: #232F3E;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+  }

@@ -1,0 +1,122 @@
+:root {
+  /* Default Theme Variables (Netflix) */
+  --primary-color: #e50914;
+  --secondary-color: #221f1f;
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --accent-color: #564d4d;
+  --button-color: #e50914;
+  --button-text: #ffffff;
+  --transition-duration: 0.3s;
+  
+  /* Netflix Theme */
+  --netflix-red: #e50914;
+  --netflix-black: #000000;
+  --netflix-dark-gray: #221f1f;
+  --netflix-light-gray: #564d4d;
+  --netflix-white: #ffffff;
+}
+
+/* GitHub Theme */
+.theme-github {
+  --primary-color: #2ea44f;
+  --secondary-color: #24292e;
+  --background-color: #f6f8fa;
+  --text-color: #24292e;
+  --accent-color: #6a737d;
+  --button-color: #2ea44f;
+  --button-text: #ffffff;
+  
+  --netflix-red: #2ea44f;       /* Changed to GitHub green */
+  --netflix-black: #24292e;     /* Changed to GitHub dark header */
+  --netflix-dark-gray: #6a737d; /* Changed to GitHub text color */
+  --netflix-light-gray: #e1e4e8;/* Changed to GitHub border color */
+  --netflix-white: #f6f8fa;     /* Changed to GitHub background */
+}
+
+/* Spotify Theme */
+.theme-spotify {
+  --primary-color: #1db954;
+  --secondary-color: #191414;
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --accent-color: #535353;
+  --button-color: #1db954;
+  --button-text: #ffffff;
+  
+  --netflix-red: #1db954;       /* Changed to Spotify green */
+  --netflix-black: #121212;     /* Changed to Spotify dark background */
+  --netflix-dark-gray: #191414; /* Changed to Spotify darker background */
+  --netflix-light-gray: #535353;/* Changed to Spotify gray */
+  --netflix-white: #ffffff;     /* Kept white */
+}
+
+/* Apple Theme */
+.theme-apple {
+  --primary-color: #0071e3;
+  --secondary-color: #f5f5f7;
+  --background-color: #ffffff;
+  --text-color: #1d1d1f;
+  --accent-color: #86868b;
+  --button-color: #0071e3;
+  --button-text: #ffffff;
+  
+  --netflix-red: #0071e3;       /* Changed to Apple blue */
+  --netflix-black: #1d1d1f;     /* Changed to Apple dark text */
+  --netflix-dark-gray: #86868b; /* Changed to Apple gray text */
+  --netflix-light-gray: #f5f5f7;/* Changed to Apple light background */
+  --netflix-white: #ffffff;     /* Kept white */
+}
+
+/* Apply theme to body */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+
+/* Theme-specific button styles */
+.theme-button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all var(--transition-duration);
+}
+
+.theme-button.netflix {
+  background-color: #e50914;
+  color: white;
+}
+
+.theme-button.github {
+  background-color: #2ea44f;
+  color: white;
+}
+
+.theme-button.spotify {
+  background-color: #1db954;
+  color: white;
+}
+
+.theme-button.apple {
+  background-color: #0071e3;
+  color: white;
+}
+
+/* Apply themed button styles */
+.themed-button {
+  background-color: var(--button-color);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+}
+
+.themed-button:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,498 @@
+.twitter-portfolio {
+    font-family: 'Chirp', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--twitter-text, #0f1419);
+    background-color: var(--twitter-background, #f7f9f9);
+    line-height: 1.5;
+  }
+  
+  :root {
+    --twitter-primary: #1d9bf0;
+    --twitter-primary-hover: #1a8cd8;
+    --twitter-text: #0f1419;
+    --twitter-text-secondary: #536471;
+    --twitter-border: #eff3f4;
+    --twitter-background: #f7f9f9;
+    --twitter-card-bg: #ffffff;
+  }
+  
+  /* Twitter Navigation */
+  .twitter-nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 100;
+    border-bottom: 1px solid var(--twitter-border);
+  }
+  
+  .twitter-nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+  }
+  
+  .twitter-logo {
+    color: var(--twitter-primary, #1d9bf0);
+  }
+  
+  .twitter-nav-links {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .twitter-nav-links a {
+    color: var(--twitter-text, #0f1419);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  
+  .twitter-nav-links a:hover {
+    color: var(--twitter-primary, #1d9bf0);
+  }
+  
+  /* Twitter Container */
+  .twitter-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  /* Twitter Card */
+  .twitter-card {
+    background-color: var(--twitter-card-bg, #ffffff);
+    border-radius: 16px;
+    border: 1px solid var(--twitter-border);
+    padding: 16px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  
+  .twitter-card:hover {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+  
+  /* Twitter Hero Section */
+  .twitter-hero {
+    padding: 32px 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .twitter-hero-card {
+    padding: 24px;
+  }
+  
+  .twitter-hero-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .twitter-profile-image {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 16px;
+    border: 3px solid var(--twitter-primary);
+  }
+  
+  .twitter-profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .twitter-profile-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+  
+  .twitter-profile-handle {
+    font-size: 16px;
+    color: var(--twitter-primary);
+    margin: 0 0 4px;
+    font-weight: 400;
+  }
+  
+  .twitter-profile-title {
+    font-size: 15px;
+    color: var(--twitter-text-secondary);
+    margin: 0;
+  }
+  
+  .twitter-hero-bio {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    color: var(--twitter-text);
+  }
+  
+  .twitter-hero-actions {
+    display: flex;
+    gap: 12px;
+  }
+  
+  /* Twitter Buttons */
+  .twitter-button-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    background-color: var(--twitter-primary);
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  .twitter-button-primary:hover {
+    background-color: var(--twitter-primary-hover);
+  }
+  
+  .twitter-button-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 19px;
+    border-radius: 9999px;
+    border: 1px solid var(--twitter-border);
+    background-color: transparent;
+    color: var(--twitter-text);
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  .twitter-button-secondary:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+  
+  /* Twitter Sections */
+  .twitter-section {
+    padding: 48px 0;
+  }
+  
+  .twitter-section-alt {
+    background-color: rgba(29, 155, 240, 0.05);
+  }
+  
+  .twitter-section-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: var(--twitter-text);
+    position: relative;
+    display: inline-block;
+  }
+  
+  .twitter-section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 48px;
+    height: 4px;
+    background-color: var(--twitter-primary);
+    border-radius: 2px;
+  }
+  
+  /* Twitter Skills */
+  .twitter-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  
+  .twitter-skill-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .twitter-skill-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    color: var(--twitter-primary);
+  }
+  
+  .twitter-skill-bar {
+    height: 8px;
+    background-color: var(--twitter-border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  
+  .twitter-skill-progress {
+    height: 100%;
+    background-color: var(--twitter-primary);
+    border-radius: 4px;
+    width: 0;
+    transition: width 1s ease-out;
+  }
+  
+  .twitter-skill-level {
+    font-size: 14px;
+    color: var(--twitter-text-secondary);
+  }
+  
+  /* Twitter Experience */
+  .twitter-experience-container,
+  .twitter-education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  
+  .twitter-experience-card,
+  .twitter-education-card {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .twitter-experience-header,
+  .twitter-education-header {
+    margin-bottom: 8px;
+  }
+  
+  .twitter-experience-title,
+  .twitter-education-institution {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+  
+  .twitter-experience-company,
+  .twitter-education-degree {
+    font-size: 16px;
+    color: var(--twitter-primary);
+    margin: 0;
+  }
+  
+  .twitter-experience-date,
+  .twitter-education-date {
+    font-size: 14px;
+    color: var(--twitter-text-secondary);
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .twitter-experience-description {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--twitter-text);
+  }
+  
+  /* Twitter Projects */
+  .twitter-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  
+  .twitter-project-image {
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .twitter-project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .twitter-project-card:hover .twitter-project-image img {
+    transform: scale(1.05);
+  }
+  
+  .twitter-project-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  
+  .twitter-project-description {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    color: var(--twitter-text);
+  }
+  
+  .twitter-project-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .twitter-tech-tag {
+    font-size: 13px;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    background-color: rgba(29, 155, 240, 0.1);
+    color: var(--twitter-primary);
+  }
+  
+  .twitter-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--twitter-primary);
+    text-decoration: none;
+  }
+  
+  .twitter-link span {
+    margin-left: 4px;
+    transition: transform 0.2s ease;
+  }
+  
+  .twitter-link:hover span {
+    transform: translateX(4px);
+  }
+  
+  /* Twitter Contact */
+  .twitter-contact-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .twitter-contact-card {
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .twitter-contact-item {
+    display: flex;
+    margin-bottom: 24px;
+  }
+  
+  .twitter-contact-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(29, 155, 240, 0.1);
+    border-radius: 50%;
+    margin-right: 16px;
+    color: var(--twitter-primary);
+    flex-shrink: 0;
+  }
+  
+  .twitter-contact-details h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+  
+  .twitter-contact-details a {
+    color: var(--twitter-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .twitter-contact-details a:hover {
+    text-decoration: underline;
+  }
+  
+  .twitter-social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  
+  .twitter-social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(29, 155, 240, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--twitter-primary);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .twitter-social-link:hover {
+    background-color: var(--twitter-primary);
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  /* Twitter Footer */
+  .twitter-footer {
+    background-color: var(--twitter-card-bg);
+    border-top: 1px solid var(--twitter-border);
+    padding: 32px 0;
+    text-align: center;
+    color: var(--twitter-text-secondary);
+    font-size: 14px;
+  }
+  
+  .twitter-footer p {
+    margin: 0 0 8px;
+  }
+  
+  /* Animations */
+  .twitter-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .twitter-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .twitter-nav-links {
+      display: none;
+    }
+    
+    .twitter-hero-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .twitter-profile-image {
+      margin-bottom: 16px;
+    }
+    
+    .twitter-hero-actions {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .twitter-button-primary,
+    .twitter-button-secondary {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .twitter-projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }

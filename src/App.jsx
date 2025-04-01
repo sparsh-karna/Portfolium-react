@@ -8,11 +8,13 @@ function App() {
   const [formData, setFormData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [showPortfolio, setShowPortfolio] = useState(false);
+  const [theme, setTheme] = useState('neutral'); // Default to neutral theme
 
   const handleFormSubmit = (data) => {
     setFormData(data);
+    setTheme(data.theme || 'neutral'); // Set theme based on form data or default to neutral
     setLoading(true);
-    
+
     // Simulate loading time
     setTimeout(() => {
       setLoading(false);
@@ -25,10 +27,10 @@ function App() {
       {!showPortfolio && !loading && (
         <PortfolioForm onSubmit={handleFormSubmit} />
       )}
-      
-      {loading && <Loader />}
-      
-      {showPortfolio && <Portfolio portfolioData={formData} />}
+
+      {loading && <Loader theme={theme} />}
+
+      {showPortfolio && <Portfolio portfolioData={formData} theme={theme} />}
     </div>
   );
 }

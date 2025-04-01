@@ -1,0 +1,632 @@
+/* Microsoft Theme CSS */
+:root {
+    --ms-primary: #0078d4;
+    --ms-secondary: #505050;
+    --ms-accent: #ffb900;
+    --ms-dark: #242424;
+    --ms-light: #f2f2f2;
+    --ms-white: #ffffff;
+    --ms-background: #ffffff;
+    --ms-text: #242424;
+    --ms-text-light: #767676;
+    --ms-radius: 2px;
+    --ms-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --ms-transition: all 0.3s ease;
+  }
+  
+  .ms-portfolio {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--ms-text);
+    line-height: 1.5;
+    background-color: var(--ms-background);
+  }
+  
+  /* Microsoft Container */
+  .ms-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  /* Microsoft Navigation */
+  .ms-nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--ms-white);
+    box-shadow: var(--ms-shadow);
+    z-index: 100;
+  }
+  
+  .ms-nav .ms-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+  }
+  
+  .ms-logo {
+    color: var(--ms-primary);
+  }
+  
+  .ms-nav-links {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .ms-nav-links a {
+    color: var(--ms-text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+    transition: var(--ms-transition);
+  }
+  
+  .ms-nav-links a:hover {
+    color: var(--ms-primary);
+    border-bottom: 2px solid var(--ms-primary);
+  }
+  
+  /* Microsoft Hero Section */
+  .ms-hero {
+    padding: 80px 0;
+  }
+  
+  .ms-hero .ms-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .ms-hero-content {
+    flex: 1;
+    min-width: 300px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .ms-hero-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .ms-hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    transition-delay: 0.3s;
+  }
+  
+  .ms-hero-image.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .ms-hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--ms-radius);
+    box-shadow: var(--ms-shadow);
+    border: 4px solid var(--ms-white);
+  }
+  
+  .ms-hero-title {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  
+  .ms-hero-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 60px;
+    height: 4px;
+    background-color: var(--ms-primary);
+  }
+  
+  .ms-hero-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    color: var(--ms-primary);
+  }
+  
+  .ms-hero-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    color: var(--ms-text-light);
+  }
+  
+  /* Microsoft Buttons */
+  .ms-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .ms-button-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    padding: 10px 20px;
+    background-color: var(--ms-primary);
+    color: var(--ms-white);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--ms-radius);
+    transition: var(--ms-transition);
+  }
+  
+  .ms-button-primary:hover {
+    background-color: #106ebe;
+  }
+  
+  .ms-button-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: var(--ms-primary);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--ms-primary);
+    border-radius: var(--ms-radius);
+    transition: var(--ms-transition);
+  }
+  
+  .ms-button-secondary:hover {
+    background-color: rgba(0, 120, 212, 0.1);
+  }
+  
+  /* Microsoft Sections */
+  .ms-section {
+    padding: 80px 0;
+  }
+  
+  .ms-section-alt {
+    background-color: var(--ms-light);
+  }
+  
+  .ms-section-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 16px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .ms-section-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .ms-section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--ms-primary);
+  }
+  
+  /* Microsoft Skills Grid */
+  .ms-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  
+  .ms-skill-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .ms-skill-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .ms-skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .ms-skill-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ms-text);
+  }
+  
+  .ms-skill-level {
+    font-size: 14px;
+    color: var(--ms-text-light);
+  }
+  
+  .ms-skill-bar {
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .ms-skill-progress {
+    height: 100%;
+    background-color: var(--ms-primary);
+    width: 0;
+    transition: width 1s ease-out;
+  }
+  
+  /* Microsoft Timeline */
+  .ms-timeline {
+    margin-bottom: 60px;
+    position: relative;
+  }
+  
+  .ms-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 16px;
+    width: 2px;
+    background-color: #e0e0e0;
+  }
+  
+  .ms-timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+    padding-left: 48px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .ms-timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .ms-timeline-marker {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--ms-primary);
+    border: 3px solid var(--ms-white);
+    box-shadow: var(--ms-shadow);
+  }
+  
+  .ms-timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  
+  .ms-timeline-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ms-text);
+    margin: 0;
+  }
+  
+  .ms-timeline-date {
+    font-size: 14px;
+    color: var(--ms-text-light);
+  }
+  
+  .ms-timeline-company {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ms-primary);
+    margin: 0 0 12px 0;
+  }
+  
+  .ms-timeline-description {
+    font-size: 14px;
+    color: var(--ms-text-light);
+    line-height: 1.6;
+  }
+  
+  /* Microsoft Projects Grid */
+  .ms-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  
+  .ms-project-card {
+    background-color: var(--ms-white);
+    border-radius: var(--ms-radius);
+    overflow: hidden;
+    box-shadow: var(--ms-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease, box-shadow 0.3s ease;
+  }
+  
+  .ms-project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .ms-project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ms-project-image {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .ms-project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .ms-project-card:hover .ms-project-image img {
+    transform: scale(1.05);
+  }
+  
+  .ms-project-content {
+    padding: 20px;
+  }
+  
+  .ms-project-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--ms-text);
+  }
+  
+  .ms-project-description {
+    font-size: 14px;
+    color: var(--ms-text-light);
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  
+  .ms-project-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .ms-tech-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    font-size: 12px;
+    color: var(--ms-text);
+  }
+  
+  .ms-link {
+    display: inline-block;
+    color: var(--ms-primary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 0;
+    position: relative;
+  }
+  
+  .ms-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--ms-primary);
+    transition: width 0.3s ease;
+  }
+  
+  .ms-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Microsoft Contact */
+  .ms-contact {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ms-contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 900px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .ms-contact-info.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .ms-contact-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: var(--ms-white);
+    border-radius: var(--ms-radius);
+    box-shadow: var(--ms-shadow);
+  }
+  
+  .ms-contact-icon {
+    margin-right: 16px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--ms-primary);
+    border-radius: var(--ms-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ms-white);
+    flex-shrink: 0;
+  }
+  
+  .ms-contact-details h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--ms-text);
+  }
+  
+  .ms-contact-details a {
+    color: var(--ms-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .ms-contact-details a:hover {
+    text-decoration: underline;
+  }
+  
+  .ms-social-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+  }
+  
+  .ms-social-link {
+    width: 40px;
+    height: 40px;
+    background-color: var(--ms-light);
+    border-radius: var(--ms-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ms-primary);
+    transition: all 0.3s ease;
+  }
+  
+  .ms-social-link:hover {
+    background-color: var(--ms-primary);
+    color: var(--ms-white);
+  }
+  
+  /* Microsoft Footer */
+  .ms-footer {
+    background-color: var(--ms-dark);
+    color: var(--ms-white);
+    padding: 32px 0;
+    text-align: center;
+  }
+  
+  .ms-footer-content {
+    font-size: 14px;
+  }
+  
+  .ms-footer-content p {
+    margin-bottom: 8px;
+  }
+  
+  /* Microsoft Reveal Animation */
+  .ms-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .ms-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .ms-nav-links {
+      display: none;
+    }
+  
+    .ms-hero .ms-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .ms-hero-title::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .ms-buttons {
+      justify-content: center;
+    }
+  
+    .ms-timeline::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .ms-timeline-item {
+      padding-left: 0;
+      padding-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .ms-timeline-marker {
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+  
+    .ms-contact-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .ms-contact-icon {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  
+    .ms-social-links {
+      justify-content: center;
+    }
+  }

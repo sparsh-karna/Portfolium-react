@@ -1,10 +1,10 @@
 import React from 'react';
 import './Loader.css';
 
-const Loader = () => {
+const Loader = ({ theme = 'neutral' }) => {
   return (
-    <div className="netflix-loader">
-      <div className="loader"></div>
+    <div className={`loader-container ${theme}-loader`}>
+      <div className={`loader ${theme}-spinner`}></div>
     </div>
   );
 };

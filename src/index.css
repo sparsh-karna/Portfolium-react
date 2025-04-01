@@ -1,11 +1,23 @@
 :root {
+  --primary-color: #000000;
+  --secondary-color: #333333;
+  --accent-color: #5555ff;
+  --text-color: #ffffff;
+  --text-secondary: #aaaaaa;
+  --border-color: #444444;
+  --background-color: #121212;
+  --card-background: #1e1e1e;
+  --success-color: #4caf50;
+  --error-color: #f44336;
+  --transition-duration: 0.3s;
+  
+  /* Keep Netflix variables for compatibility with existing code */
   --netflix-red: #e50914;
   --netflix-black: #000000;
   --netflix-dark-gray: #222222;
   --netflix-medium-gray: #333333;
   --netflix-light-gray: #757575;
   --netflix-white: #ffffff;
-  --transition-duration: 0.3s;
 }
 
 * {
@@ -20,8 +32,8 @@ html {
 }
 
 body {
-  background-color: var(--netflix-black);
-  color: var(--netflix-white);
+  background-color: var(--background-color);
+  color: var(--text-color);
   overflow-x: hidden;
 }
 
@@ -50,9 +62,26 @@ body {
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background-color: var(--netflix-red);
+  background-color: var(--accent-color);
 }
 
+button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color var(--transition-duration) ease;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Keep Netflix button for compatibility */
 .netflix-button {
   background-color: var(--netflix-red);
   color: white;
