@@ -1,0 +1,44 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.skill-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--netflix-red);
+}
+
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-item span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--netflix-dark-gray);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--netflix-red);
+  border-radius: 4px;
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

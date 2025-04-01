@@ -1,0 +1,93 @@
+.initial-form-screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: var(--netflix-black);
+}
+
+.form-container {
+  background-color: var(--netflix-dark-gray);
+  border-radius: 8px;
+  padding: 40px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.form-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--netflix-red);
+  text-align: center;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--netflix-medium-gray);
+  border: none;
+  border-radius: 4px;
+  color: var(--netflix-white);
+  font-size: 1rem;
+  border-bottom: 2px solid var(--netflix-light-gray);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.form-group label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: var(--netflix-light-gray);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group input:not(:placeholder-shown),
+.form-group textarea:not(:placeholder-shown) {
+  border-color: var(--netflix-red);
+}
+
+.form-group input:focus ~ label,
+.form-group textarea:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group textarea:not(:placeholder-shown) ~ label {
+  top: -10px;
+  left: 0;
+  font-size: 0.8rem;
+  color: var(--netflix-red);
+}
+
+.skills-input,
+.social-input {
+  margin-bottom: 30px;
+}
+
+.skills-input h3,
+.social-input h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--netflix-white);
+}
+
+form .netflix-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
