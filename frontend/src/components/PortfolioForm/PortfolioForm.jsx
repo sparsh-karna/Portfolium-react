@@ -13,7 +13,6 @@ const PortfolioForm = ({ onSubmit }) => {
   const [activeTab, setActiveTab] = useState('personal');
   const [formProgress, setFormProgress] = useState(0);
   const [formData, setFormData] = useState({
-    // Personal Info
     profileImage: '',
     fullName: '',
     title: '',
@@ -22,27 +21,20 @@ const PortfolioForm = ({ onSubmit }) => {
     phone: '',
     location: '',
     languages: '',
-    
-    // Professional
     website: '',
     linkedin: '',
     github: '',
     twitter: '',
     skills: '',
     interests: '',
-    
-    // Experience
     workExperience: [],
     education: [],
     projects: [],
-    
-    // Additional Information
     achievements: '',
     certifications: '',
-    
-    // Theme
-    selectedTheme: 'netflix' // Default theme
+    selectedTheme: 'netflix'
   });
+  const [uploadStatus, setUploadStatus] = useState('');
 
   // Companies for theme selection
   const companies = [
@@ -62,6 +54,60 @@ const PortfolioForm = ({ onSubmit }) => {
     const progressPercentage = ((currentTabIndex) / (TABS.length - 1)) * 100;
     setFormProgress(progressPercentage);
   }, [activeTab]);
+
+  const handleResumeUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    setUploadStatus('Uploading...');
+
+    const formDataUpload = new FormData();
+    formDataUpload.append('resume', file);
+
+    try {
+      const response = await fetch('http://localhost:1211/api/resume/upload', {  // Adjust the endpoint URL as needed
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWNiMDhhMzk2ZGYyNDExZTMyNWRkMCIsImlhdCI6MTc0MzU3MDk3MiwiZXhwIjoxNzQzNTc0NTcyfQ.jtcIsEX4DNtv7Gm_c1mlc2q5YNdxn8m8aRYtO_PVmYQ'
+        },
+        body: formDataUpload
+      });
+
+      if (!response.ok) {
+        throw new Error('Upload failed');
+      }
+
+      const resumeData = await response.json();
+      
+      // Map the resume data to the formData structure
+      setFormData(prevData => ({
+        ...prevData,
+        profileImage: resumeData.profileImage || '',
+        fullName: resumeData.fullName || '',
+        title: resumeData.title || '',
+        bio: resumeData.bio || '',
+        email: resumeData.email || '',
+        phone: resumeData.phone || '',
+        location: resumeData.location || '',
+        languages: resumeData.languages.join(', ') || '',
+        website: resumeData.website || '',
+        linkedin: resumeData.linkedin || '',
+        github: resumeData.github || '',
+        twitter: resumeData.twitter || '',
+        skills: resumeData.skills.join(', ') || '',
+        interests: resumeData.interests.join(', ') || '',
+        workExperience: resumeData.workExperience || [],
+        education: resumeData.education || [],
+        projects: resumeData.projects || [],
+        achievements: resumeData.achievements.join('\n') || '',
+        certifications: resumeData.certifications.join('\n') || ''
+      }));
+
+      setUploadStatus('Resume uploaded successfully!');
+    } catch (error) {
+      setUploadStatus('Failed to upload resume: ' + error.message);
+    }
+  };
 
   const handleTabChange = (tabId) => {
     setActiveTab(tabId);
@@ -249,6 +295,23 @@ const PortfolioForm = ({ onSubmit }) => {
         
         <form onSubmit={handleSubmit}>
           {/* Personal Info Section */}
+          <div className="form-group">
+              <input
+                type="file"
+                id="resumeUpload"
+                accept=".pdf"
+                onChange={handleResumeUpload}
+              />
+              <label htmlFor="resumeUpload">Upload Resume (PDF)</label>
+              <span className="helper-text">
+                Upload your resume to auto-fill the form (optional)
+              </span>
+              {uploadStatus && (
+                <span className="helper-text" style={{ color: uploadStatus.includes('Failed') ? 'red' : 'green' }}>
+                  {uploadStatus}
+                </span>
+              )}
+            </div>
           <div className={`form-section ${activeTab === 'personal' ? 'active' : ''}`}>
             <div className="form-group">
               <input

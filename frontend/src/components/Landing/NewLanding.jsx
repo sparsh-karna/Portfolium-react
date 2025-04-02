@@ -193,9 +193,9 @@ const NewLanding = () => {
         
         <div className="team-grid">
           <div className="team-card">
-            <div className="team-avatar">
+            {/* <div className="team-avatar">
               <img src="https://xsgames.co/randomusers/assets/avatars/male/67.jpg" alt="Sparsh Karna" />
-            </div>
+            </div> */}
             <div className="team-info">
               <h3>Sparsh Karna</h3>
               <p className="team-role">Frontend Developer</p>
@@ -204,9 +204,9 @@ const NewLanding = () => {
           </div>
           
           <div className="team-card">
-            <div className="team-avatar">
+            {/* <div className="team-avatar">
               <img src="https://xsgames.co/randomusers/assets/avatars/female/67.jpg" alt="Lavanaya Malhotra" />
-            </div>
+            </div> */}
             <div className="team-info">
               <h3>Lavanaya Malhotra</h3>
               <p className="team-role">UX Designer</p>
@@ -215,9 +215,9 @@ const NewLanding = () => {
           </div>
           
           <div className="team-card">
-            <div className="team-avatar">
-              <img src="https://xsgames.co/randomusers/assets/avatars/female/45.jpg" alt="Stuti" />
-            </div>
+            {/* <div className="team-avatar">
+              <img src="/Users/sparshkarna/Portfolium/frontend/public/stuti.png" alt="Stuti" />
+            </div> */}
             <div className="team-info">
               <h3>Stuti</h3>
               <p className="team-role">Backend Developer</p>

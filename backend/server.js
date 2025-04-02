@@ -5,12 +5,14 @@ const authRoutes = require("./routes/authRoutes");
 const resumeRoutes = require("./routes/resumeRoutes");
 const userRoutes = require("./routes/userRoutes"); // Add this line
 const multer = require("multer");
+const cors = require('cors')
 
 dotenv.config();
 const app = express();
 
 // Middleware
 app.use(express.json());
+app.use(cors());
 
 // Multer setup for file uploads
 const upload = multer({ dest: "uploads/" });
