@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import NewLanding from './components/Landing/NewLanding';
 import PortfolioForm from './components/PortfolioForm/PortfolioForm';
 import Loader from './components/Loader/Loader';
 import Portfolio from './components/Portfolio/Portfolio';
@@ -23,15 +24,23 @@ function App() {
   };
 
   return (
-    <div className="App">
-      {!showPortfolio && !loading && (
-        <PortfolioForm onSubmit={handleFormSubmit} />
-      )}
-
-      {loading && <Loader theme={theme} />}
-
-      {showPortfolio && <Portfolio portfolioData={formData} theme={theme} />}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<NewLanding />} />
+        <Route path="/create" element={
+          showPortfolio ? 
+            <Navigate to="/portfolio" /> : 
+            loading ? 
+              <Loader theme={theme} /> : 
+              <PortfolioForm onSubmit={handleFormSubmit} />
+        } />
+        <Route path="/portfolio" element={
+          formData ? 
+            <Portfolio data={formData} theme={theme} /> : 
+            <Navigate to="/create" />
+        } />
+      </Routes>
+    </Router>
   );
 }
 
